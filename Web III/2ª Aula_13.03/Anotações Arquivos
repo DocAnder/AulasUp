@@ -1,0 +1,21 @@
+Apache Tomcat 
+
+https://tomcat.apache.org/download-10.cgi
+Sessao CORE
+Baixar a versão windows
+
+No terminal:
+./startup.sh (linux) -> Inicializa o servidor
+Talvez seja necessário mudar a permissao dele (com o chmod 777 + nome arquivo)
+Comando: chmod 777 startup.sh
+Comando: chmod -R 777 bin/ (muda a permissão pra geral)
+
+Talvez precise criar na pasta raiz a pasta logs.
+mkdir logs (na pasta do apache)
+
+IDE que sera usada
+Intellij IDEA
+
+MySql + MySql Workbench
+
+Chrome e Postman
