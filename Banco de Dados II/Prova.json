@@ -94,7 +94,46 @@
                     ],
                     "dificuldade": "facil",
                     "topico": [ "estruturas de dados" ]
-        }
+        },
+                    {    
+                    "numero": 28, 
+                    "cabecalho": "Qual dos termos é usado para descrever uma conexão em que as duas pontas são capazes de se comunicar simultaneamente?",
+                    "apendice": null,
+                    "alternativas": [
+                        {"TCP/IP": false},
+                        {"Half Duplex": false},
+                        {"Full Duplex": true},
+                        {"Double Duplex": false}
+                    ],
+                    "dificuldade": "facil",
+                    "topico": [ "redes" ]
+        },
+                    {    
+                    "numero": 30, 
+                    "cabecalho": "Qual das opções a seguir é um aplicativo mal-intencionado projetado para monitorar e registrar as atividades de um usuário de computador?",
+                    "apendice": null,
+                    "alternativas": [
+                        {"Verme": false},
+                        {"Spyware": true},
+                        {"Vírus": false},
+                        {"Ataque Direto": false}
+                    ],
+                    "dificuldade": "facil",
+                    "topico": [ "cibersegurança" ]
+        },
+                     {    
+                    "numero": 42, 
+                    "cabecalho": "A maioria das linguagens de programação possuem similaridades entre elas. Em uma linguagem de programação, nome, endereço, valor, tipo, tempo de vida e escopo são características de:",
+                    "apendice": null,
+                    "alternativas": [
+                        {"uma variável": true},
+                        {"uma função.": false},
+                        {"um procedimento.": false},
+                        {"um método": false}
+                    ],
+                    "dificuldade": "facil",
+                    "topico": [ "escopo", "linguagem de programação" ]
+        }  
 
 
         
