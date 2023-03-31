@@ -1,0 +1,10 @@
+senha do b.o do banco online
+
+andersonmartinseoliveira
+yXdjhO3ODbtq3Fp3
+
+
+
+Comando que busca por uma palavra coringa
+
+{title: { $regex: /^Adventure/i}}
