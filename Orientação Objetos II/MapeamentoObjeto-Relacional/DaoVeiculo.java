@@ -1,4 +1,6 @@
+import java.sql.Array;
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -43,6 +45,23 @@ public class DaoVeiculo {
             this.desconectar();
         }
         return resultado;
+    }
+
+    public void listarTodos(){ 
+        ResultSet resultado;       
+        try {
+            this.conectar();
+            String comando = "SELECT * from tb_veiculos;"; 
+            resultado = st.executeQuery(comando);
+            while (resultado.next()) {                
+                System.out.println(resultado.getString("MARCA"));
+                System.out.println(resultado.getString("MODELO"));
+            }                     
+        } catch (Exception e) {
+            // TODO: handle exception
+        }finally{
+            this.desconectar();
+        }        
     }
 
 }
