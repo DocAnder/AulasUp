@@ -1,0 +1,10 @@
+senha do b.o do banco online
+
+DocAnder
+VNhHGa0odtTGajHr
+
+
+
+Comando que busca por uma palavra coringa
+
+{title: { $regex: /^Adventure/i}}
