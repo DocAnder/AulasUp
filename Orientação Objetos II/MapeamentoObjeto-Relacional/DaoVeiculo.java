@@ -121,7 +121,7 @@ public class DaoVeiculo {
             "chassi = '" + veiculo.getChassi() + "'," +
             "ano = " + veiculo.getAno() +
             " WHERE codigo = " + veiculo.getCodigo() + ";";
-            System.out.println(comando);
+            //System.out.println(comando);
             st.executeUpdate(comando);
             qtd = st.getUpdateCount();
         } catch (Exception e) {
@@ -139,7 +139,7 @@ public class DaoVeiculo {
         int resultado = 0;
         try {
             this.conectar();
-            String comando = "DELET FROM tb_veiculos WHERE codigo = " + codigo + ";";            
+            String comando = "DELETE FROM tb_veiculos WHERE codigo = " + codigo + ";";            
             st.executeUpdate(comando);
             //getUpdate recupera quantos dados foram apagados do banco            
             resultado = st.getUpdateCount();

@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class GerenciadorVeiculo {
         scanner = new Scanner(System.in);
     }
 
-    public void menu(){
+    public void menu() throws NumberFormatException, IOException{
         int opcao = 1;        
         while (opcao != 0) {
             System.out.println("-----===============================-----");
@@ -27,7 +28,7 @@ public class GerenciadorVeiculo {
             try {
                 opcao = Integer.parseInt(scanner.nextLine());
             } catch (Exception e) {
-                System.out.println("Erro na leitura...informe um numero numero inteiro!" + e.getMessage());                                
+                System.out.println("Erro na leitura...informe um numero inteiro!" + e.getMessage());                                
             }
 
             switch (opcao) {
@@ -36,6 +37,7 @@ public class GerenciadorVeiculo {
                     break;
                 case 2:
                     this.buscarUm();
+                    break;
                 case 3:
                     this.alterar();                 
                     break;

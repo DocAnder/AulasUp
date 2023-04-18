@@ -7,3 +7,12 @@ create table tb_veiculos(codigo int(4) not null auto_increment, marca varchar(30
 
 show tables;
 select * from tb_veiculos;
+
+
+BEGIN TRANSACTION
+   INSERT INTO Tabela1 (Coluna1, ...) VALUES (....);
+   INSERT INTO Tabela2 VALUES (..., LAST_INSERT_ID());
+COMMIT
+
+COMANDO P/ ENDEREÇO CARREGANDO O ULTIMO ID - Se assim ñ der certo usar o getClienteID()
+INSERT INTO tb_endereco VALUES(LAST_INSERT_ID(), 'rua do 3 nova', 00000000, 'barro do 3 novo', 'cidade do 3 outra');

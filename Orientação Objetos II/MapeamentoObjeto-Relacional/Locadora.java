@@ -1,14 +1,20 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Locadora {
     
     public static void main(String[] args) {
         Locadora locadora = new Locadora();
-        locadora.menu();
+        try {
+            locadora.menu();
+        } catch (NumberFormatException | IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
-    public void menu(){
+    public void menu() throws NumberFormatException, IOException{
         int opcao = 1;
         BufferedReader leitor = new BufferedReader(new InputStreamReader(System.in));
         while (opcao != 0) {
@@ -22,16 +28,18 @@ public class Locadora {
             try {
                 opcao = Integer.parseInt(leitor.readLine());
             } catch (Exception e) {
-                System.out.println("Erro na leitura...informe um numero numero inteiro!" + e.getMessage());                                
+                System.out.println("Erro na leitura...informe um numero inteiro!" + e.getMessage());                                
             }
 
             switch (opcao) {
                 case 1:
-                    GerenciadorVeiculo aux = new GerenciadorVeiculo();
-                    aux.menu();
+                    GerenciadorVeiculo menuVeiculo = new GerenciadorVeiculo();
+                    menuVeiculo.menu();
                     break;
                 case 2:
-                    //gerenciar clientes
+                    GerenciadorCliente menuCliente = new GerenciadorCliente();
+                    menuCliente.menu();
+                    break;                    
                 case 3:
                     System.out.println("Sistema encerrado!");                    
                     break;
