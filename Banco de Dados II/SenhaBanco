@@ -4,7 +4,12 @@ DocAnder
 VNhHGa0odtTGajHr
 
 
+mongodb+srv://DocAnder:VNhHGa0odtTGajHr@cluster0.m8sr78y.mongodb.net/test
+
 
 Comando que busca por uma palavra coringa
 
 {title: { $regex: /^Adventure/i}}
+
+
+
