@@ -22,6 +22,7 @@ public class Locadora {
             System.out.println("-----== MENU PRINCIPAL ==-----");
             System.out.println("[1] - Gerenciar Veículos.");
             System.out.println("[2] - Gerenciar Clientes.");
+            System.out.println("[3] - Gerenciar Clientes PJ.");
             System.out.println("[0] - Sair");
             System.out.println("-----====================-----");
 
@@ -39,8 +40,12 @@ public class Locadora {
                 case 2:
                     GerenciadorCliente menuCliente = new GerenciadorCliente();
                     menuCliente.menu();
-                    break;                    
+                    break;      
                 case 3:
+                    GerenciadorClientePJ menuPJ = new GerenciadorClientePJ();
+                    menuPJ.menu();
+                    break;              
+                case 0:
                     System.out.println("Sistema encerrado!");                    
                     break;
                 default:
