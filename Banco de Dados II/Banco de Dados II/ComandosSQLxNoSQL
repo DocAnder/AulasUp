@@ -1,0 +1,27 @@
+
+
+## Comandos no SQL para filtrar os dados:
+
+Select: Seleciona as colunas; 
+Group By: Agrupa os resultados por um atributo/coluna;
+Where: Especifica uma condição;
+Join: Obter dados em mais de uma tabela
+
+
+## Comandos no NoSQL para filtragem dos dados:
+
+Projetc = Select;
+Math = Where
+Group = group by
+Lookup = Join
+
+
+
+EX:
+
+LET docs = colMuni.aggregate([
+    {"match":{
+        "Uf": "RO"
+    }    
+ }
+])
