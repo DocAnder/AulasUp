@@ -6,7 +6,7 @@ import org.hibernate.annotations.BatchSize;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-@Entity(name = "veiculo")
+@Entity(name = "veiculos")
 public class Veiculo {
 
     @Id
