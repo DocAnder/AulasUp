@@ -1,0 +1,17 @@
+create database dbnotebooks;
+use dbnotebooks;
+
+
+CREATE TABLE Notebooks (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  modelo VARCHAR(50),
+  marca VARCHAR(50),
+  preco INT,
+  cor VARCHAR(50),
+  gpu boolean
+);
+
+SELECT * FROM Notebooks;
+
+INSERT INTO Notebooks (id, modelo, marca, preco, cor, gpu)
+VALUES (NULL, "AlienWare", "Dell", 8500, "preto", true);
