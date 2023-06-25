@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+
+    
+    <form action="/salvar/questao" method="post">
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Enunciado" name="inputEnunciado" required>
+            <label for="floatingInput">Enunciado</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Opcao 1" name="inputOpcao1" required>
+            <label for="floatingInput">Opcao 1</label>
+            <input type="checkbox" name="op1Correta" value="True"> <span>Certa?</span> 
+            <p></p>   
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Opcao 2" name="inputOpcao2" required>
+            <label for="floatingInput">Opcao 2</label>
+            <input type="checkbox" name="op2Correta" value="True"> <span>Certa?</span>
+            <p></p>  
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Opcao 3" name="inputOpcao3" required>
+            <label for="floatingInput">Opcao 3</label>
+            <input type="checkbox" name="op3Correta" value="True"> <span>Certa?</span>
+            <p></p>  
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Opcao 4" name="inputOpcao4" required>
+            <label for="floatingInput">Opcao 4</label>   
+            <input type="checkbox" name="op4Correta" value="True"> <span>Certa?</span>     
+            <p></p>    
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="categoria" name="categoria" required>
+            <label for="floatingInput">categoria</label>       
+            <p></p>               
+        </div>
+
+        <div class="form-floating"> 
+            <input type="text" class="form-control" id="floatingInput" placeholder="categoria" name="categoria2">
+            <label for="floatingInput">categoria</label> 
+            <p></p>     
+        </div>
+
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Grau Dificuldade" name="grauDificuldade" required>
+            <label for="floatingInput">Grau dificuldade</label>   
+        </div>
+
+   
+    
+    
+       
+    
+    
+    
+      </div>
+    
+    </div>
+    </div>
+    
+    <button type="submit" class="btn btn-dark">Salvar</button>
+    </form>
+    
+    
+
+
+
+</main>
+
+{% endblock %}

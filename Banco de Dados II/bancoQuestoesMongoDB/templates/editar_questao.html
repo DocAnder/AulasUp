@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+
+    
+    <form action="/editar/questao/{{ questao._id }}" method="post">
+
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" value="{{questao.cabecalho}}" name="inputEnunciado" required>  
+            <label for="floatingInput">Enunciado</label>          
+        </div>
+        {% set count = namespace(value=1) %}
+        {% for alternativa in questao.alternativas %} 
+        {% for key in alternativa %}
+        
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" value="{{ key }}" name="opcao{{count.value}}" required> 
+            <label for="floatingInput">Opcao</label>           
+            <input type="checkbox" name="resposta{{count.value}}" value="True"> <span>Certa?</span> 
+            <p></p>   
+        </div>     
+                           
+                            
+        {% set count.value = count.value + 1 %}
+        {% endfor %}
+        {% endfor %}
+
+        {% for topico in questao.topico %} 
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" value="{{ topico }}" name="categoria{{ loop.index }}">
+            <label for="floatingInput">categoria</label>       
+            <p></p>               
+        </div>   
+                                              
+
+        
+        {% endfor %}          
+   
+      
+
+
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" value="{{ questao.dificuldade }}" name="grauDificuldade" required>
+            <label for="floatingInput">Grau dificuldade</label>   
+        </div>
+
+   
+    
+    
+       
+    
+    
+    
+      </div>
+    
+    </div>
+    </div>
+    
+    <button type="submit" class="btn btn-dark">Salvar</button>
+    </form>
+    
+    
+
+
+
+</main>
+
+{% endblock %}

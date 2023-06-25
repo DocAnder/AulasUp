@@ -1,0 +1,10 @@
+<td>                    
+                    {% for alternativa in questao.alternativas %}
+                        {% for key in alternativa %}
+                    
+                            {{ key }} 
+                            <p></p>
+
+                         {% endfor %}
+                    {% endfor %}
+                </td>

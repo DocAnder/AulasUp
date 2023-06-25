@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+<main>
+
+    <ul class="page-nav">
+    </ul>
+
+    <h2>Lista de Questoes</h2>
+    <a class="btn btn-dark" href="{{ url_for('cadastro_questao') }}">Cadastrar Nova</a>    
+
+    <table class="table table-hover">
+        
+        <tbody>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Enunciado</th>
+                    <th>Dificuldade</th>
+                    <th>Tema</th>
+                </tr>
+            </thead>
+            {% for questao in questoes %}            
+            <tr>
+
+                <td>{{questao._id}}</td>
+                <td>{{questao.cabecalho}}</td>
+                <td>{{questao.dificuldade}}</td>
+                <td>
+                    {% for topico in questao.topico %}
+                    
+                        {{topico}}
+                        <p></p>
+                                        
+                    {% endfor %}
+                </td>                
+                <td> 
+                    <a class="btn btn-secondary btn-sm" href="{{ url_for('editar_questao', idQuestao=questao._id) }}">Editar</a>
+                    <p></p>
+                    <a class="btn btn-warning btn-sm" href="{{ url_for('deletar_questao', idQuestao=questao._id) }}">Excluir</a> 
+                </td> 
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+
+{% endblock %}
