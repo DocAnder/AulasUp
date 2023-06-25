@@ -33,13 +33,33 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/questoes/index", methods=["GET"])
+@app.route("/questoes/index", methods=["GET", "POST"])
 def questoes_index():
-    col = get_collection()
-    # res = col.find({"title": "iPhone in Action"})
-    res = col.find()
-    questoes = list(res)
-    return render_template("questoes_list.html", questoes=questoes)
+
+    if request.method == "GET":
+
+        col = get_collection()
+        # res = col.find({"title": "iPhone in Action"})
+        res = col.find()
+        questoes = list(res)
+        return render_template("questoes_list.html", questoes=questoes)
+    
+    elif request.method == "POST":
+
+        opcaoPesquisa = request.form.get('opcaoPesquisa')
+        palavraPesquisa = request.form.get('palavraPesquisa')
+        print(opcaoPesquisa)
+        print(palavraPesquisa)
+
+        col = get_collection()
+        res = col.find(
+            {
+                opcaoPesquisa: {'$regex': palavraPesquisa, '$options': 'i'}
+            }
+        )
+        questoes = list(res)
+        return render_template("questoes_list.html", questoes=questoes)
+    
 
 
 @app.route("/cadastro/questao", methods=["GET"])

@@ -6,7 +6,20 @@
     </ul>
 
     <h2>Lista de Questoes</h2>
-    <a class="btn btn-dark" href="{{ url_for('cadastro_questao') }}">Cadastrar Nova</a>    
+    <a class="btn btn-dark" href="{{ url_for('cadastro_questao') }}">Cadastrar Nova</a> 
+    <form action="/questoes/index" method="POST">
+        <small>Filtrar por: </small>
+            <select name="opcaoPesquisa">
+
+                    <option value="cabecalho"> Enunciado </option>
+                    <option value="topico"> Tema </option>
+
+            </select>
+        <small>contém: </small>
+            <input type="text" placeholder="palavra-chave" name="palavraPesquisa">
+
+        <button type="submit">procurar</button>
+    </form>   
 
     <table class="table table-hover">
         
