@@ -1,0 +1,98 @@
+
+[{
+    
+	"numero": 6, 
+        "cabecalho": "Em Java, a palavra-chave que implementa uma relação de herança de classes é:",
+	"apendice": null,
+        "alternativas": [
+        {"implements": false},
+        {"package.": false},
+        {"inherits": false},
+        {"extends": true}
+                    ],
+        "dificuldade": "facil",
+        "topico": [ "java", "heranca" ]
+},
+{    
+        "numero": 4, 
+	"cabecalho": "Controlar a complexidade pela ênfase em características essenciais e pela supressão de detalhes em orientação a objetos é denominado(a):",
+         "apendice": null,
+         "alternativas": [
+         {"abstracao": true},
+         {"heranca.": false},
+         {"analogia": false},
+         {"encapsulamento": false}
+         ],
+         "dificuldade": "facil",
+         "topico": [ "java", "orientacao objetos" ]
+},
+{    
+         "numero": 8, 
+          "cabecalho": "O sistema de exceções do Java é uma ferramenta para ajudar os programadores a reportar e manipular erros. Os erros gerados durante a execução de um programa Java devem ser controlados com uma estrutura que pode combinar o uso dos blocos",
+          "apendice": null,
+          "alternativas": [
+          {"try e finally": false},
+          {"if e else": false},
+          {"try e catch": true},
+          {"exception": false}
+          ],
+          "dificuldade": "facil",
+          "topico": [ "java", "orientacao objetos" ]
+}, 
+{    
+          "numero": 15, 
+          "cabecalho": "Os comandos básicos SQL pertencentes à classe de linguagem de manipulação dos dados são:",
+          "apendice": null,
+          "alternativas": [
+          {"select e create": false},
+          {"create e delete": false},
+          {"alter e delete": false},
+          {"update e delete": true}
+          ],
+          "dificuldade": "facil",
+          "topico": [ "Banco de Dados", "Comandos SQL" ]
+},
+{    
+          "numero": 1, 
+          "cabecalho": "Um algoritmo é uma sequência finita de instruões , que serve de base para uma futura implementação em uma linguagem de programação. Ele representa os passos necessários para realizar uma tarefa. A estrutura de iteração na qual uma ação será executada pelo menos uma vez, antes da avaliação da condição, pode ser implementada pelo comando:",
+          "apendice": null,
+          "alternativas": [
+          {"repita...até que(condição)": true},
+          {"se (condição)...senão": false},
+          {"para": false},
+          {"enquanto(condição)": false}
+          ],
+          "dificuldade": "facil",
+          "topico": [ "Estruturas de repeticao" ]
+},
+{    
+          "numero": 25, 
+          "cabecalho": "A utilização da assinatura digital providencia a prova inegável de que uma mensagem veio do emissor. Qual a propriedade em que o emissor não pode negar a autenticidade da mensagem?",
+          "apendice": null,
+          "alternativas": [
+          {"Autenticidade": false},
+          {"Integridade": false},
+          {"Não repúdio": true},
+          {"Confidencialidade": false}
+          ],
+          "dificuldade": "media",
+          "topico": [ "seguranca digital" ]
+}, 
+{    
+          "numero": 33, 
+          "cabecalho": "Qual estrutura de dados é caracterizada por: o primeiro elemento a ser retirado deve ser o último que foi inserido?",
+           "apendice": null,
+           "alternativas": [
+           {"Fila": false},
+           {"Pilha": true},
+           {"Lista": false},
+           {"Arvore": false}
+           ],
+           "dificuldade": "facil",
+           "topico": [ "estruturas de dados" ]
+}]
+
+
+        
+    
+
