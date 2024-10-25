@@ -35,7 +35,8 @@ function criaTabela() {
 
 function run(){
     i=0;
-    setInterval(move, 1000);
+    // setInterval(move, 1000);
+    interval = setInterval(move, 1000);
 }
 
 
@@ -68,11 +69,8 @@ function posicionarElementos(){
 function move(){
 
     var perdeu = false;
-    if(i<vet.length){
-
-        
+    if(i<vet.length){        
         robo = document.getElementById("robo");
-
         try {
             cel = robo.parentElement;                     
         } catch (error) {
@@ -80,23 +78,18 @@ function move(){
         } 
 
         if(perdeu){
-            if(confirm("Perdeu amigo!")){
-                location.reload();
-                clearInterval();
-            }
-        }
-
-        
+            alert("Perdeu amigo!!");
+            clearInterval(interval);
+            location.reload();  
+        }        
 
         pos = cel.id;
         pos = pos.split(",");
         switch(vet[i]){
-            case 0:     
-                console.log("botão esquerda")          
+            case 0:            
                 pos[1]--;
                 break;
             case 1:
-                console.log("botão direita")
                 pos[1]++
                 break;
             case 2:
@@ -105,15 +98,29 @@ function move(){
             case 3:
                 pos[0]++
                 break;
-        }
-        // }        
+        }     
         
         nova = document.getElementById(pos[0] + "," + pos[1]);        
         cel.removeChild(robo);
         nova.appendChild(robo);
         cel = nova;
-        i++;        
+        i++;      
+
+              
+    }  else {
+        if(nova.id === posCasa){
+            alert("Parabens você venceu!!");
+            clearInterval(interval);
+            location.reload();               
+
+        }else{
+            alert("Perdeu! Os comandos foram insuficientes para chegar à casa.");
+            clearInterval(interval);
+            location.reload();            
+        }        
     }
+
+    
 }
 
 
